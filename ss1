@@ -1,0 +1,93 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+ */
+package hellojava;
+
+import java.util.Scanner;//~#include <stdio.h>
+//muon thu vien muon ham 
+public class Hellojava {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        playWithVariables();
+       // playDouble();
+        chara();
+        boole();
+       // inso();
+        System.out.println("Nhap so n vao : ");
+    int x = get();
+        System.out.println("Your nmbers: " + x);
+           
+    print(x);
+        
+    }
+    //static chi chơi với static-oop
+    public static void playWithVariables() {
+        //bien la mot vung ram chua mot so byte nhat dinh
+        //tuy loai du lieu hay thong tin chua ben trong
+        //bien la cach dat ten cho mot dai luong gia tri
+        int age = 20;
+        int a = 10 , b;
+        b = 100;
+        int yob = 200;
+        int c = 200 - b;
+        long m = 3_000_000_000L;
+        //ton 12 byte trong RAM de luu tru thong tin on - off
+        System.out.println("m = "+ m);
+        int s = 0xFA;
+        System.out.println("s = " + s);
+        int phone = 010;// so he 8 octal;
+        System.out.println("phone = " + phone);
+    }
+    public static void playDouble() {
+        double pi = 3.14;
+        System.out.println("pi = "+ pi);
+        float vat = 0.1F;
+        System.out.println("vat = " + vat);
+    }
+    public static void chara() {
+        //2 byte
+        char c = '$';
+        int a = 100;
+        String name = "Phan Ngoc Duong";
+        System.out.println("My name as in a lowercase : " + name.toLowerCase());
+        
+    }
+    public static void boole() {
+        //c: true - false : 0 - 1;
+        //JAVA : dung : true  , sai : false; --> boolean;
+        boolean m = false;
+        if  (m == false)
+            System.out.println("Em chua 18");
+        else
+            System.out.println("Em da 18");
+}
+    public static void inso() {
+        System.out.println("The list 100 first intergers:   ");
+        for(int i = 0 ;i < 100;i++)
+        System.out.printf("%d ", i);
+    }
+    //in ra tu 1 -> n
+    //hiện tượng 1 class bất kì chứa nhiều hàm trùng tên
+    //nhưng khác tham số và phải khác data types mới đc chấp nhận
+    //ĐƯỢC GỌI LÀ OVERLOADING - quá tải hàm
+    public static void print(int n) {
+        for (int i = 0; i < n; i++) {
+            System.out.println(" "+i);
+        }
+    }
+    public static int get() {
+     int n;
+    //nhap tu ban phims ki thuat oop
+    Scanner banPhimcuaT = new Scanner(System.in);
+        System.out.println("Input a postive interger: ");
+        n = banPhimcuaT.nextInt();
+     return n;
+     
+    }
+       
+}
